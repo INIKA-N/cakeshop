@@ -1,0 +1,238 @@
+.package {
+    text-align: center;
+    
+    position: relative;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .package-container {
+    padding: 20px;
+  }
+  
+  .sorting-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px 0;
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sorting-bar label {
+    color: #ffffff;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  
+  .sorting-bar select {
+    padding: 8px 12px;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .packaging-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .packaging-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .item-image {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .item-info {
+    text-align: left;
+  }
+  
+  .item-title {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .item-price {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .add-button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Overlay Styles */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure the overlay is above other content */
+  }
+  
+  .overlay-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1000; /* Ensure the overlay content is above the overlay background */
+    width: 80%; /* Adjust the width of the overlay */
+    max-width: 600px; /* Set a maximum width for the overlay */
+  }
+  
+  .overlay-image-container {
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 5px; /* Add some spacing below the image */
+  }
+  
+  .overlay-image {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+  }
+  
+  .overlay-options {
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    margin-left: 20px; /* Add margin to create space between image and items */
+  }
+  
+  .overlay-option {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc; /* Add a border at the bottom of each item */
+    padding-bottom: 10px; /* Add padding to separate items visually */
+    margin: 10px; /* Add four-sided margin */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box-shadow for a box-like structure */
+    padding: 10px; /* Add padding for spacing within the box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smoother hover effect */
+  }
+  
+  
+  .overlay-option:hover {
+    transform: translateY(-2px); /* Add a slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance box-shadow on hover */
+  }
+  
+  
+  .overlay-option:last-child {
+    border-bottom: none; /* Remove the bottom border for the last item */
+  }
+  
+  .overlay-option label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  
+  .overlay-option-price {
+    font-size: 0.9rem; /* Adjust the font size of the price */
+    color: #666; /* Set color for the price */
+    margin-top: 5px;
+    margin-left:19px;
+  }
+  
+  .overlay-option input[type="radio"] {
+    display: none; /* Hide the radio buttons */
+  }
+  
+  .overlay-option input[type="radio"] + .overlay-option-label::before {
+    content: "";
+    display: inline-block;
+    width: 8px; /* Decrease the width of the radio button */
+    height: 8px; /* Decrease the height of the radio button */
+    border: 2px solid #007bff; /* Change border color to match the selected radio button */
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: background-color 0.3s ease; /* Add transition for smoother visual change */
+  }
+  
+  .overlay-option input[type="radio"]:checked + .overlay-option-label::before {
+    background-color: #007bff; /* Change background color to match the selected radio button */
+  }
+  /* Add Buy Now button styling */
+.overlay-add-to-cart {
+    margin-top: 20px; /* Add spacing between Add to Cart and Buy Now buttons */
+    display: flex;
+    justify-content:space-around; /* Align buttons horizontally with space between */
+  }
+  
+  .overlay-add-to-cart button {
+    padding: 8px 12px;
+    background-color: #28a745; /* Green color for Buy Now button */
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .overlay-add-to-cart button:hover {
+    background-color: #218838; /* Darker shade of green on hover */
+  }
+  
