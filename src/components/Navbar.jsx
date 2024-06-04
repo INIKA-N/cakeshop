@@ -43,9 +43,9 @@ function Navbar({ cartItemsCount }) {
         <button className="icon-button"><FaShoppingCart /> 
           {cartItemsCount > 0 && <span className="cart-count">{cartItemsCount}</span>}
         </button> 
-        <button className="icon-button"><FaShoppingCart /> 
+        {/* <button className="icon-button"><FaShoppingCart /> 
           {cartItemsCount > 0 && <span className="cart-count">{cartItemsCount}</span>}
-        </button> 
+        </button>  */}
       </div>
     </div>
   );
